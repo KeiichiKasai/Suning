@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的易购-个人信息</title>
+    <link rel="icon" href="images/favicon.ico"/>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: #f5f5f5;;
+        color: #333;
+
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .header {
+        height: 56px;
+        background: #f70;
+    }
+
+    .header img {
+        float: left;
+        margin-top: 14px;
+        margin-left: 40px;
+    }
+
+
+    li {
+        list-style: none;
+    }
+
+    .header ul li {
+        float: left;
+        height: 56px;
+    }
+
+    .header ul li a {
+        display: block;
+        width: 80px;
+        height: 100%;
+        text-align: center;
+        line-height: 56px;
+        color: #fff;
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    .main {
+        width: 1100px;
+        height: 500px;
+        margin: 0 auto;
+        margin-top: 20px;
+        border: 1px solid #ddd;
+        background: #fff;
+    }
+
+    .header1 {
+        position: relative;
+        width: 1100px;
+        height: 40px;
+        margin: 0 auto;
+        background: #fafafa;
+
+    }
+
+    .header1 span {
+        position: absolute;
+        top: 10px;
+        margin-left: 20px;
+        color: #666666;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .middle {
+
+    }
+
+    .headname {
+        position: relative;
+        width: 800px;
+        height: 190px;
+        margin: 0 auto;
+        border-bottom: 1px solid #f1f1f1;
+    }
+
+    .head_portrait {
+        width: 125px;
+        height: 125px;
+        position: relative;
+        top: 32px;
+        left: 0;
+        display: block;
+        border-radius: 50%;
+    }
+
+    .username {
+        position: absolute;
+        left: 170px;
+        top: 90px;
+        font-size: 14px;
+    }
+
+    .information {
+        width: 600px;
+        height: 245px;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .nicheng span {
+        float: left;
+        color: #666;
+        font-size: 12px;
+    }
+
+    .nicheng input {
+        float: left;
+        width: 140px;
+        height: 18px;
+        margin-left: 5px;
+        padding: 3px 5px;
+        border: 1px solid #bbb;
+        line-height: 18px;
+    }
+
+    .nicheng {
+        width: 800px;
+        height: 30px;
+    }
+
+    .nichenghidden {
+        float: left;
+        display: none;
+        margin-left: 20px;
+        color: #666;
+        font-size: 12px;
+    }
+
+    .sex {
+        position: relative;
+        line-height: 15px;
+        margin-top: 10px;
+    }
+
+    .sex em {
+        position: absolute;
+        top: 4px;
+        left: -9px;
+        color: #f00;
+    }
+
+    .sex span {
+
+        color: #666;
+        font-size: 12px;
+    }
+
+    .sex input {
+        vertical-align: middle
+
+    }
+
+    .sex label span {
+
+        color: #333;
+        font-family: Simsun;
+        font-size: 12px;
+    }
+
+    .sex-label {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .phonenumber {
+        height: 18px;
+        margin-top: 20px;
+    }
+
+
+    .phonenumber span {
+        float: left;
+        color: #666;
+        font-size: 12px;
+    }
+
+    .phonenumber input {
+        float: left;
+        width: 140px;
+        height: 18px;
+        margin-left: 5px;
+        padding: 3px 5px;
+        border: 1px solid #bbb;
+        line-height: 18px;
+    }
+
+
+    .site {
+        height: 18px;
+        margin-top: 25px;
+    }
+
+
+    .site span {
+        float: left;
+        color: #666;
+        font-size: 12px;
+    }
+
+    .site input {
+        float: left;
+        width: 140px;
+        height: 18px;
+        margin-left: 5px;
+        padding: 3px 5px;
+        border: 1px solid #bbb;
+        line-height: 18px;
+    }
+
+
+    .age {
+        height: 18px;
+        margin-top: 25px;
+    }
+
+
+    .age span {
+        float: left;
+        color: #666;
+        font-size: 12px;
+    }
+
+    .age input {
+        float: left;
+        width: 140px;
+        height: 18px;
+        margin-left: 5px;
+        padding: 3px 5px;
+        border: 1px solid #bbb;
+        line-height: 18px;
+    }
+
+    .button2 {
+        position: relative;
+    }
+
+    .save {
+        position: absolute;
+        top: 15px;
+        left: 32px;
+        width: 77px;
+        height: 30px;
+        background: #F90;
+        border-radius: 3px;
+        font: 14px/30px "Microsoft Yahei";
+        text-align: center;
+        color: #fff;
+        border-width: 0px;
+    }
+
+    /* .delete {
+        position: absolute;
+        top: 15px;
+        left: 135px;
+        width: 77px;
+        height: 30px;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        font: 14px/30px "Microsoft Yahei";
+        text-align: center;
+        color: #222;
+    } */
+</style>
+
+<body>
+<div class="header">
+    <img src="images/ms-logo.png">
+
+    <ul>
+        <li><a href="#">首页</a></li>
+        <li><a href="#">个人信息</a></li>
+        <li><a href="#">地址管理</a></li>
+        <li><a href="#">修改密码</a></li>
+        <li><a href="#">修改头像</a></li>
+    </ul>
+</div>
+<div class="main">
+    <div class="header1">
+        <span>个人信息</span>
+    </div>
+    <div class="middle">
+        <div class="headname">
+            <img src="images/touxiang.jpg" class="head_portrait">
+            <a></a>
+            <div class="username">王小明</div>
+        </div>
+        <form action="http://localhost:8080/account/setting" method="post">
+        <div class="information">
+            <div class="nicheng">
+                <span>昵称:</span>
+                <input type="text" id="nicheng" name="nickname" >
+                <span class="nichenghidden" id="nichenghidden" >昵称由中文、英文、数字、-和_组成</span>
+            </div>
+            <div class="sex">
+                <em>*</em>
+                <span>性别:</span>
+                <label class="sex-label">
+                    <input type="radio"  checked="" name="gender" value="男">
+                    <span>男</span>
+                </label>
+                <label class="sex-label">
+                    <input type="radio" name="gender" value="女">
+                    <span>女</span>
+                </label>
+                <label class="sex-label">
+                    <input type="radio" name="gender" value="保密">
+                    <span>保密</span>
+                </label>
+            </div>
+            <div class="phonenumber">
+                <span>手机:</span>
+                <input type="text" name="phone" value="">
+            </div>
+            
+            <div class="age">
+                <span>年龄:</span>
+                <input type="text" name="age" value="">
+            </div>
+            <div class="button2">
+                <input id="save-btn" class="save" type="submit">
+                    </input>
+                <!-- <button id="delete-btn" class="delete" type="button">
+                    删除
+                </button> -->
+            </div>
+
+        </div>
+        </form>
+    </div>
+</div>
+</body>
+<script>
+
+    document.getElementById("nicheng").onfocus = function () {
+
+        var element = document.getElementById('nichenghidden');
+        element.style.display = 'block';
+    }
+
+    document.getElementById("nicheng").onblur = function () {
+
+        var element = document.getElementById('nichenghidden');
+        element.style.display = 'none';
+
+    }
+</script>
+</html>

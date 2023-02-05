@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>苏宁易购-苏宁云商网上商城，领先的综合网上购物商城，正品行货，全国联保，货到付款，让您尽享购物乐趣！</title>
+    <link rel="icon" href="images/favicon.ico"/>
+    <style>
+        /* 清除内外边距*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f8f8f8;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        .header {
+            width: 1000px;
+            height: 88px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            float: left;
+            width: 189px;
+            height: 88px;
+        }
+
+        .logo-txt {
+            float: left;
+            height: 88px;
+            font-size: 18px;
+            line-height: 88px;
+            color: #666;
+            margin-left: 30px;
+
+        }
+
+        .login {
+            float: right;
+            margin-top: 68px;
+            font-size: 13px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .login:hover {
+            color: #F60;
+        }
+
+        .main {
+            width: 1000px;
+            height: 470px;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            border-top: 3px solid #f90;
+            background: #fff;
+        }
+
+        .middle {
+            width: 380px;
+            height: 500px;
+            margin: 0 auto;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .gift-one {
+            position: relative;
+            height: 25px;
+            margin-bottom: 10px;
+            line-height: 25px;
+            font-size: 14px;
+        }
+
+        .gift-one em {
+            font-style: normal;
+            color: #f40;
+        }
+
+        .gift-two {
+            position: absolute;
+            width: 360px;
+            height: 25px;
+            left: 30px;
+        }
+
+        .gift-one img {
+            position: absolute;
+            top: 4px;
+            left: 4px;
+        }
+
+        .phonenumber {
+            position: relative;
+            margin: 0 auto;
+            width: 380px;
+            height: 40px;
+        }
+
+        .phonenumber-lable {
+            position: absolute;
+            top: 12px;
+            left: 13px;
+            z-index: 1;
+            font-size: 12px;
+            color: #222;
+        }
+
+
+        .phonenumber-input {
+            position: absolute;
+            width: 380px;
+            height: 40px;
+            border: 1px solid #ccc;
+            font-size: 12px;
+            color: #CACACA;
+            caret-color: black;
+            padding-left: 80px;
+        }
+
+        .phonenumber-hiddentext1 {
+            display: none;
+            height: 14px;
+            padding-top: 3px;
+            color: #999;
+            caret-color: black;
+            font-size: 12px;
+            line-height: 14px;
+        }
+
+        .name {
+            position: relative;
+            margin: 7px auto 0px;
+            margin-top: 25px;
+            width: 380px;
+            height: 40px;
+        }
+
+        .name-lable {
+            position: absolute;
+            top: 12px;
+            left: 13px;
+            z-index: 1;
+            font-size: 12px;
+            color: #222;
+        }
+
+        .name-input {
+            position: absolute;
+            width: 380px;
+            height: 40px;
+            border: 1px solid #ccc;
+            font-size: 12px;
+            color: #CACACA;
+            caret-color: black;
+            padding-left: 80px;
+        }
+
+        /*.name-send{*/
+        /*position: absolute;*/
+        /*left: 229px;*/
+        /*width: 148px;*/
+        /*height: 40px;*/
+        /*line-height: 38px;*/
+        /*text-align: center;*/
+        /*background: #f5f5f5;*/
+        /*border: 1px solid #bbb;*/
+        /*font-size: 14px;*/
+        /*text-decoration: none;*/
+        /*}*/
+        .name a:hover {
+            color: #F60;
+        }
+
+        .password {
+            position: relative;
+            margin: 30px auto 0px;
+            width: 380px;
+            height: 40px;
+        }
+
+        .password-lable {
+            position: absolute;
+            top: 12px;
+            left: 13px;
+            z-index: 1;
+            font-size: 12px;
+            color: #222;
+        }
+
+        .password-input {
+            position: absolute;
+            width: 380px;
+            height: 40px;
+            border: 1px solid #ccc;
+            font-size: 12px;
+            color: #CACACA;
+            caret-color: black;
+            padding-left: 80px;
+        }
+
+        .suggestion {
+            display: none;
+            position: absolute;
+            top: 40px;
+            font-size: 12px;
+            color: #999;
+        }
+
+        .submit {
+            display: block;
+            width: 380px;
+            height: 40px;
+            margin-top: 68px;
+            line-height: 40px;
+            background: #f60;
+            border-width: 0px;
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 2px;
+        }
+    </style>
+
+</head>
+
+<body>
+<div class="header">
+    <div class="logo">
+        <img src="images/logo-register.png">
+    </div>
+    <div class="logo-txt">
+        欢迎注册
+    </div>
+    <a class="login" href="login.html" target="_blank">
+        我已经注册，马上登录>
+    </a>
+</div>
+<div class="main">
+    <div class="middle">
+        <div class="gift-one">
+            <img class="gift-img" src="images/gift.png">
+            <div class="gift-two">注册领<em>199</em>元大礼包</div>
+        </div>
+        <form action="http://localhost:8080/user/register" method="post">
+        <div class="phonenumber">
+            <label for="phonenumber-ip" class="phonenumber-lable">手机号码</label>
+            <input type="text" class="phonenumber-input" id="phonenumber-ip" name="phone" value="建议使用常用的手机号码"
+                   maxlength="11">
+        </div>
+        <div class="phonenumber-hiddentext1" id="phonenumber-hiddentext1">
+            验证完成后, 您可以使用该手机登录或者找回密码
+        </div>
+        <div class="name">
+            <label for="name-ip" class="name-lable">用户名</label>
+            <input type="text" class="name-input" id="name-ip" name="username" value="请输入用户名" maxlength="4">
+            <!--        <a class="name-send">-->
+            <!--获取短信验证码-->
+            <!--        </a>-->
+        </div>
+        <div class="password">
+
+            <label for="password-ip" class="password-lable">设置密码</label>
+            <input type="text" class="password-input" id="password-ip" name="password" value="请输入密码" maxlength="20">
+            <div class="suggestion" id="suggestion">
+                8-20个字符,由字母,数字和符号的两种以上组合.
+            </div>
+        </div>
+        <input type="submit" class="submit" value="提交注册">
+      </form>
+        <!-- <button id="register-btn" class="submit" type="button">
+            提交注册
+        </button> -->
+        
+    </div>
+</div>
+</body>
+<script>
+    var inputValue = '建议使用常用的手机号码'
+    document.getElementById("phonenumber-ip").onfocus = function () {
+        if (this.value == inputValue) {
+            this.value = '';
+        }
+        var element = document.getElementById('phonenumber-hiddentext1');
+        element.style.display = 'block';
+    }
+
+    document.getElementById("phonenumber-ip").onblur = function () {
+        if (this.value === '') {
+            this.style.color = '#CACACA'
+            this.style.fontSize = '12px'
+            this.value = inputValue
+        } else {
+            this.value = this.value
+        }
+        var element = document.getElementById('phonenumber-hiddentext1');
+        element.style.display = 'none';
+
+    }
+
+    document.getElementById("phonenumber-ip").oninput = function () {
+        this.style.color = '#222'
+        this.style.fontSize = '14px'
+
+    }
+
+
+    var inputValue3 = '请输入密码'
+    document.getElementById("password-ip").onfocus = function () {
+        if (this.value == inputValue3) {
+            this.value = ''
+        }
+        var element = document.getElementById('suggestion');
+        element.style.display = 'block';
+    }
+
+    document.getElementById("password-ip").onblur = function () {
+        if (this.value === '') {
+            this.style.color = '#CACACA'
+            this.style.fontSize = '12px'
+            this.value = inputValue3
+        } else {
+            this.value = this.value
+        }
+
+        var element = document.getElementById('suggestion');
+        element.style.display = 'none';
+    }
+
+    document.getElementById("password-ip").oninput = function () {
+        this.style.color = '#222'
+        this.style.fontSize = '14px'
+
+    }
+
+
+    var inputValue2 = '请输入用户名'
+    document.getElementById("name-ip").onfocus = function () {
+        if (this.value == inputValue2) {
+            this.value = ''
+        }
+
+    }
+
+    document.getElementById("name-ip").onblur = function () {
+        if (this.value === '') {
+            this.style.color = '#CACACA'
+            this.style.fontSize = '12px'
+            this.value = inputValue2
+        } else {
+            this.value = this.value
+        }
+
+
+    }
+
+    document.getElementById("name-ip").oninput = function () {
+        this.style.color = '#222'
+        this.style.fontSize = '14px'
+
+    }
+    // const loginBtn = document.getElementById("register-btn")
+
+    // loginBtn.onclick = async function reg() {
+    //     // 获取用户输入的用户名和密码和手机号
+    //     const username = document
+    //         .getElementById("name-ip")
+    //         .value.trim()
+    //     const password = document
+    //         .getElementById("password-ip")
+    //         .value.trim()
+    //     const phonenumber = document
+    //         .getElementById("phonenumber-ip")
+    //         .value.trim()
+    //     let res = await fetch('', {
+    //         method: 'post',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify({phonenumber,username, password})
+    //     })
+    //     if (res.status == 'ok') {
+    //         alert("注册成功")
+    //     } else {
+    //         alert("注册失败")
+    //     }
+    //     let json = await res.json()
+    //     console.log(json)
+    // }
+
+</script>
+
+</html>

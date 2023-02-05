@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户登录</title>
+    <link rel="icon" href="images/favicon.ico"/>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: #FFF;
+        color: #333;
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .header {
+        width: 970px;
+        height: 88px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .middle {
+        min-width: 980px;
+        height: 575px;
+        background-image: url("./images/loginbackground.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .login-module {
+        position: relative;
+        width: 980px;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    .login-a {
+        /*position: absolute;*/
+        float: left;
+        width: 580px;
+        height: 100%;
+
+    }
+
+    .login-b {
+
+        float: right;
+        width: 360px;
+        height: 390px;
+        margin-top: 50px;
+        background: #fff;
+        box-shadow: 0 0 2px #ececec;
+    }
+
+    .login-c {
+        position: relative;
+        height: 45px;
+        border-bottom: 1px solid #eee;
+        text-align: center;
+        font-size: 18px;
+        line-height: 45px;
+    }
+
+    .login-c span {
+        color: #F60;
+    }
+
+    .login-c .color {
+        position: absolute;
+        top: 41px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 100px;
+        height: 4px;
+        background: #ff4400;
+        z-index: 999;
+    }
+
+    .login-d {
+
+    }
+
+    .account {
+        position: relative;
+    }
+
+    .account-ip {
+        width: 326px;
+        height: 36px;
+        margin: 50px 17px 20px 17px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+        color: #CACACA;
+        caret-color: black;
+        padding-left: 35px;
+    }
+
+    .account-lable {
+        position: absolute;
+        top: 58px;
+        left: 25px;
+    }
+
+
+    .password {
+        position: relative;
+    }
+
+    .password-ip {
+        width: 326px;
+        height: 36px;
+        margin: 5px 17px 20px 17px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+        color: #CACACA;
+        caret-color: black;
+        padding-left: 35px;
+    }
+
+    .password-lable {
+        position: absolute;
+        top: 13px;
+        left: 25px;
+    }
+
+    .login-f {
+        position: relative;
+        width: 360px;
+        height: 30px;
+    }
+
+    .change-password {
+        position: absolute;
+        top: 34px;
+        right: 24px;
+        font-size: 12px;
+        color: #222222;
+    }
+
+    .change-password:hover {
+        color: #F60;
+    }
+
+    .login-e {
+        width: 360px;
+        height: 100px;
+        text-align: center;
+
+    }
+
+    .logina {
+        text-decoration: none;
+        display: block;
+        width: 310px;
+        margin: 0 auto;
+        margin-top: 30px;
+        background: #f50;
+        border-radius: 2px;
+        border-width: 0px;
+        line-height: 40px;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+    }
+    .logina:hover{
+        background: red;;
+    }
+    .login-e .register {
+        display: block;
+        margin-top: 40px;
+        font-size: 12px;
+        color: #ff6600;
+
+    }
+</style>
+<body>
+<div class="header">
+    <img src="images/logo-register.png">
+</div>
+<div class="middle">
+    <div class="login-module">
+        <a class="login-a" target="_blank"></a>
+        <form action="http://localhost:8080/user/login" method="post">
+        <div class="login-b">
+            <div class="login-c">
+                <span>账户登录</span>
+                <div class="color"></div>
+            </div>
+
+            <div class="login-d">
+                <div class="account">
+                    <label for="account-ip" class="account-lable"><img id="account1"
+                                                                       src="images/account2.png"></label>
+                    <input type="text" class="account-ip" id='account-ip' value="用户名" name="username">
+                </div>
+
+
+                <div class="password">
+                    <label for="password-ip" class="password-lable"><img id="password1"
+                                                                         src="images/password2.png"></label>
+                    <input type="text" class="password-ip" id='password-ip' value="密码" name="password">
+                </div>
+            </div>
+            <div class="login-f">
+                <a class="change-password" href="change-password.html" target="_blank">
+                    忘记密码？
+                </a>
+            </div>
+            <div class="login-e">
+                <input class="logina" type="submit" value="登录">
+                <a href="register.html" target="_blank" class="register">
+                    注册 有惊喜 >
+                </a>
+
+            </div>
+
+        </div>
+        </form>
+    </div>
+</div>
+</body>
+
+
+<script>
+    var inputValue = '用户名'
+    document.getElementById("account-ip").onfocus = function () {
+        if (this.value == inputValue) {
+            this.value = ''
+        }
+        var element = document.getElementById("account1")
+        element.src = "images/account1.png"
+    }
+
+    document.getElementById("account-ip").onblur = function () {
+        if (this.value === '') {
+            this.style.color = '#CACACA'
+            this.style.fontSize = '14px'
+            this.value = inputValue
+        } else {
+            this.value = this.value
+        }
+        var element = document.getElementById("account1")
+        element.src = "images/account2.png"
+
+    }
+
+    document.getElementById("account-ip").oninput = function () {
+        this.style.color = '#222'
+        this.style.fontSize = '14px'
+
+    }
+
+
+    var inputValue2 = '密码'
+    document.getElementById("password-ip").onfocus = function () {
+        if (this.value == inputValue2) {
+            this.value = ''
+        }
+        var element = document.getElementById("password1")
+        element.src = "images/password1.png"
+    }
+
+    document.getElementById("password-ip").onblur = function () {
+        if (this.value === '') {
+            this.style.color = '#CACACA'
+            this.style.fontSize = '14px'
+            this.value = inputValue2
+        } else {
+            this.value = this.value
+        }
+        var element = document.getElementById("password1")
+        element.src = "images/password2.png"
+
+    }
+
+    document.getElementById("password-ip").oninput = function () {
+        this.style.color = '#222'
+        this.style.fontSize = '14px'
+
+    }
+</script>
+</html>
