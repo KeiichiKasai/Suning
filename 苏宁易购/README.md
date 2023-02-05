@@ -75,3 +75,9 @@ cookie用于获取登录状态，确保用户在进行其他操作的时候，�
 CORS 是一种基于 [HTTP Header](https://link.juejin.cn?target=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FGlossary%2FHeader) 的机制，该机制通过允许服务器标示除了它自己以外的其它域。服务器端配合浏览器实现 `CORS` 机制，可以突破浏览器对跨域资源访问的限制，实现跨域资源请求。
 
 采用cors中间件，解决跨域问题
+
+### 不足
+
+未考虑并发处理，仅接受单线程访问
+
+防止sql注入方面并未完善
