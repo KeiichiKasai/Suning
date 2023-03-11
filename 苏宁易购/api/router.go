@@ -8,6 +8,7 @@ import (
 func InitRouter() {
 	r := gin.Default()
 	r.Use(middleware.CORS())
+	r.GET("/oauth/redirect", Oauth) //第三方登录
 	//用户登录
 	u := r.Group("/user")
 	{
